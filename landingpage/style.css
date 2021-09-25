@@ -1,0 +1,157 @@
+* {
+  margin-top: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  color: #32502e;
+  position: fixed;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px;
+  font-size: 16px;
+  position: relative;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 1.7em;
+  letter-spacing: 1px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu button {
+  display: none;
+}
+
+.menu-list {
+  list-style: none;
+  display: flex;
+}
+
+.menu-list li {
+  display: inline-block;
+  margin-left: 32px;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-list li:hover {
+  color: #ff5360;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.right img {
+  width: 100%;
+  padding-left: 55px;
+}
+
+.left {
+  max-width: 45%;
+  padding: 40px 64px;
+}
+
+.right {
+  padding: 40px 48px;
+}
+
+.title {
+  color: #b6c867;
+  font-size: 3.2em;
+  width: 75%;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 48px;
+}
+
+.msg {
+  color: #865439;
+  font-size: 1.1em;
+  letter-spacing: 0.7px;
+  line-height: 32px;
+  margin-bottom: 48px;
+}
+
+button.cta {
+  border: none;
+  outline: none;
+  background: #32502e;
+  color: #fff;
+  padding: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.08);
+}
+
+button.cta:hover {
+  opacity: 0.9;
+}
+
+/*  WEB RESPONSIF */
+
+@media (max-width: 800px) {
+  header,
+  .left,
+  .right {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .main {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    font-size: 0.8em;
+  }
+
+  .left * {
+    width: 95%;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+
+  button.cta {
+    max-width: 60%;
+  }
+
+  .right img {
+    width: 80%;
+  }
+}
